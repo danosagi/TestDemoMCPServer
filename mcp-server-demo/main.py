@@ -3,7 +3,7 @@ from mcp.server.fastmcp import FastMCP
 import os
 
 # Create an MCP server
-mcp = FastMCP("Demo")
+app = FastMCP("Demo")
 
 
 
@@ -15,7 +15,7 @@ mcp = FastMCP("Demo")
 #             f.write("")
 
 
-# @mcp.tool()
+# @app.tool()
 # def add_note(note: str) -> str:
 #     """
 #     Add a note to the notes file
@@ -31,7 +31,7 @@ mcp = FastMCP("Demo")
 
 
 
-@mcp.tool()
+@app.tool()
 def usd_to_gbp(amount: float) -> float:
     """Convert USD(dollars) to GBP(pounds sterling)"""
     exchangeRate = 0.79
@@ -39,14 +39,14 @@ def usd_to_gbp(amount: float) -> float:
 
 
 # Add an addition tool
-@mcp.tool()
+@app.tool()
 def sum(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 
 
 # Add a dynamic greeting resource
-@mcp.resource("greeting://{name}")
+@app.resource("greeting://{name}")
 def get_greeting(name: str) -> str:
     """Get a personalized greeting"""
     return f"Hello, {name}!"
