@@ -5,27 +5,29 @@ import os
 # Create an MCP server
 mcp = FastMCP("Demo")
 
-notes_file = "C:\\Users\\DanielWu\\Desktop\\notes.txt"
-
-def ensure_file_exists(file_path):
-    if not os.path.exists(file_path):
-        with open(file_path, "w") as f:
-            f.write("")
 
 
-@mcp.tool()
-def add_note(note: str) -> str:
-    """
-    Add a note to the notes file
-    Args:
-        note: The note to add to the notes file
-    Returns:
-        A message indicating that the note was added successfully
-    """
-    ensure_file_exists(notes_file)
-    with open(notes_file, "a") as f:
-        f.write(note + "\n")
-    return "Note added successfully"
+# notes_file = "C:\\Users\\DanielWu\\Desktop\\notes.txt"
+
+# def ensure_file_exists(file_path):
+#     if not os.path.exists(file_path):
+#         with open(file_path, "w") as f:
+#             f.write("")
+
+
+# @mcp.tool()
+# def add_note(note: str) -> str:
+#     """
+#     Add a note to the notes file
+#     Args:
+#         note: The note to add to the notes file
+#     Returns:
+#         A message indicating that the note was added successfully
+#     """
+#     ensure_file_exists(notes_file)
+#     with open(notes_file, "a") as f:
+#         f.write(note + "\n")
+#     return "Note added successfully"
 
 
 
