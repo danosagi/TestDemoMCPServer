@@ -4,7 +4,7 @@ import os
 
 # Create an MCP server
 app = FastMCP("Demo")
-
+ 
 
 
 # notes_file = "C:\\Users\\DanielWu\\Desktop\\notes.txt"
