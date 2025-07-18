@@ -60,3 +60,4 @@ jobs:
         with:
           app-name: 'test-MCPServerHosting'
           slot-name: 'Production'
+          scm-do-build-during-deployment: false
